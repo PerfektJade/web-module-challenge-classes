@@ -49,9 +49,9 @@ class Person {
     this.age = age;
     this.stomach = [];
   };
-  eat(someFood) {
+  eat(edible) {
     if(this.stomach.length < 10){
-      this.stomach.push(someFood);
+      this.stomach.push(edible);
     }
   };
   poop() {
@@ -77,8 +77,27 @@ class Person {
 */
 
 class Car {
-  
-}
+  constructor(model, milesPerGallon) {
+    this.model = 'BatMobile';
+    this.milesPerGallon = 20;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+  fill(gallons) {
+    this.tank = this.tank + gallons;
+  };
+  drive(distance) {
+      const driveableMiles = this.tank * this.milesPerGallon;
+    if(distance <= driveableMiles) {
+      this.odometer = this.odometer + distance;
+      this.tank = this.tank - (distance / this.milesPerGallon);
+    } else {
+      this.odometer = this.odometer + driveableMiles;
+      this.tank = 0;
+      return `I ran out of fuel at ${this.odometer} miles!"`;
+    }
+  };
+};
 
 /*
   TASK 3
