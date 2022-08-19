@@ -148,8 +148,8 @@ class Instructor extends Lambdasian {
   demo(subject){
     return `Today we are learning about ${subject}`;
   };
-  grade({student}, subject){
-    return `${{student}.name} receives a perfect score on ${subject}`;
+  grade(student, subject){
+    return `${student.name} receives a perfect score on ${subject}`;
   };
 };
 
@@ -210,8 +210,8 @@ class ProjectManager extends Instructor {
   standUp(channel) {
     return `${this.name} announces to ${channel}, @channel standy times!`;
   };
-  debugsCode({student}, subject) {
-    return `${this.name} debugs ${{student}.name}'s code on ${subject}`;
+  debugsCode(student, subject) {
+    return `${this.name} debugs ${student.name}'s code on ${subject}`;
   };
 };
 
