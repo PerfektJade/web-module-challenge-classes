@@ -113,8 +113,15 @@ class Car {
 */
 
 class Lambdasian {
-  
-}
+  constructor(name, age, location){
+    this.name = 'Petar';
+    this.age = 23;
+    this.location = 'NY City'
+  };
+  speak(){
+    return `Hello my name is ${this.name}, I am from ${this.location}`;
+  };
+};
 
 /*
   TASK 4
